@@ -1,0 +1,155 @@
+Computational Complexity Conference
+International Symposium on Fundamentals of Computation Theory
+IEEE Symposium on Foundations of Computer Science
+International Colloquium on Automata, Languages and Programming
+International Symposium on Algorithms and Computation
+International Symposium on Mathematical Foundations of Computer Science
+Symposium on Theoretical Aspects of Computer Science
+ACM Symposium on Theory of Computing
+Workshop on Logic, Language, Information and Computation
+European Symposium on Algorithms
+ACM–SIAM Symposium on Discrete Algorithms
+Scandinavian Symposium and Workshops on Algorithm Theory
+Algorithms and Data Structures Symposium
+Workshop on Approximation and Online Algorithms
+International Symposium on Graph Drawing
+ACM Symposium on Computational Geometry
+ACM–IEEE Symposium on Logic in Computer Science
+International Conference on Rewriting Techniques and Applications
+International Conference on Implementation and Application of Automata
+Computational Complexity Conference
+International Workshop on Descriptional Complexity of Formal Systems
+International Conference on Developments in Language Theory
+International Symposium on Symbolic and Algebraic Computation
+International Conference on Applications and Theory of Petri Nets and Concurrency
+Symposium on Experimental Algorithms
+International Conference on Compiler Construction
+AITO European Conference on Object-Oriented Programming
+ETAPS European Symposium on Programming
+ACM SIGPLAN History of Programming Languages Conference
+ACM SIGPLAN International Conference on Functional Programming
+ALP International Conference on Logic Programming
+ACM SIGPLAN International Symposium on Memory Management
+ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications
+ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
+ACM SIGPLAN Conference on Programming Language Design and Implementation
+IEEE/ACM International Conference on Automated Software Engineering
+International Conference on Software Engineering
+International Conference on Software Reuse
+ETAPS International Conference on Tools and Algorithms for the Construction and Analysis of Systems
+ETAPS International Conference on Foundations of Software Science and Computation Structures
+ETAPS International Conference on Fundamental Approaches to Software Engineering
+Computer Aided Verification
+IFIP International Conference on Formal Techniques for Networked and Distributed Systems
+ACM International Conference on Distributed Event-Based Systems
+International Symposium on Distributed Computing
+International Conference on Dependable Systems and Networks
+IEEE International Conference on Distributed Computing Systems
+IEEE International Conference on Parallel and Distributed Systems
+IEEE International Parallel and Distributed Processing Symposium
+ACM Symposium on Principles of Distributed Computing
+ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming
+International Colloquium on Structural Information and Communication Complexity
+ACM Symposium on Parallelism in Algorithms and Architectures
+IEEE International Symposium on Reliable Distributed Systems
+International Conference on High Performance Computing
+ACM/IEEE Supercomputing Conference
+USENIX Annual Technical Conference
+USENIX Conference on File and Storage Technologies
+ACM/IFIP/USENIX International Middleware Conference
+ACM Symposium on Operating Systems Principles
+ACM International Systems and Storage Conference
+International Conference on Architectural Support for Programming Languages and Operating Systems
+International Symposium on Computer Architecture
+IEEE/ACM International Symposium on Microarchitecture
+IEEE International Symposium on Circuits and Systems
+Asia and South Pacific Design Automation Conference
+Design Automation Conference
+Design, Automation, and Test in Europe
+International Conference on Computer-Aided Design
+International Symposium on Physical Design
+IEEE Global Communications Conference
+IEEE International Conference on Communications
+International Conference on Service Oriented Computing
+IEEE Conference on Computer Communications
+ACM SIGCOMM Conference
+ACM SIGMETRICS
+European Conference on Wireless Sensor Networks
+ACM/IEEE International Conference on Information Processing in Sensor Networks
+International Symposium on Wearable Computers
+ACM International Symposium on Mobile Ad Hoc Networking and Computing
+ACM Conference on Embedded Networked Sensor Systems
+International Conference on Dependable Systems and Networks
+USENIX Security Symposium
+Applied Cryptography and Network Security
+Algorithmic Number Theory Symposium
+International Conference on the Theory and Application of Cryptology and Information Security
+Workshop on Cryptographic Hardware and Embedded Systems
+International Cryptology Conference
+International Conference on the Theory and Applications of Cryptographic Techniques
+Fast Software Encryption Workshop
+International Workshop on Practice and Theory in Public Key Cryptography
+RSA Conference
+Theory of Cryptography Conference
+Conference on Innovative Data Systems Research
+ACM Conference on Information and Knowledge Management
+European Conference on Information Retrieval
+European Conference on Information Systems
+International Conference on Conceptual Modeling
+International Conference on Database Theory
+International Conference on Information Systems
+International Semantic Web Conference
+ACM/IEEE Joint Conference on Digital Libraries
+ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+ACM Symposium on Principles of Database Systems
+Annual International ACM SIGIR Conference
+ACM SIGMOD Conference
+International Conference on Very Large Data Bases
+World Wide Web Conference
+AAAI Conference on Artificial Intelligence
+International Conference on Autonomous Agents and Multiagent Systems
+International Conference on Computational Intelligence Methods for Bioinformatics and Biostatistics
+European Conference on Artificial Intelligence
+European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases
+International Conference on Machine Learning
+International Conference on Learning Representations
+International Joint Conference on Artificial Intelligence
+International Semantic Web Conference
+Conference on Neural Information Processing Systems
+Artificial Evolution Conference
+IEEE Congress on Evolutionary Computation
+Genetic and Evolutionary Computation Conference
+International Joint Conference on Automated Reasoning
+International Conference on Logic for Programming, Artificial Intelligence and Reasoning
+RuleML Symposium
+International Conference on Automated Reasoning with Analytic Tableaux and Related Methods
+Workshop on Logic, Language, Information and Computation
+British Machine Vision Conference
+Conference on Computer Vision and Pattern Recognition
+European Conference on Computer Vision
+International Conference on Computer Vision
+Scandinavian Conference on Image Analysis
+IEEE Southwest Symposium on Image Analysis and Interpretation
+Annual Meeting of the Association for Computational Linguistics
+Empirical Methods in Natural Language Processing
+Annual Conference of the North American Chapter of the Association for Computational Linguistics
+International Committee on Computational Linguistics
+Text, Speech and Dialogue
+International Conference on Intelligent Text Processing and Computational Linguistics
+Annual Conference of the European Association for Computer Graphics
+ACM International Conference on Multimedia
+Symposium on Geometry Processing
+International Conference on Computer Graphics and Interactive Techniques
+IEEE Visualization Conference
+International ACM SIGACCESS Conference on Computers and Accessibility
+ACM Conference on Human Factors in Computing Systems
+Graphics Interface
+Conference on Human-Computer Interaction with Mobile Devices and Services
+ACM International Conference on Design of Communication
+ACM Symposium on User Interface Software and Technology
+ACM International Conference on User Modeling, Adaptation, and Personalization
+International Conference on Computational Intelligence Methods for Bioinformatics and Biostatistics
+Intelligent Systems for Molecular Biology
+Pacific Symposium on Biocomputing
+Research in Computational Molecular Biology
+Workshop on Algorithms in Bioinformatics
