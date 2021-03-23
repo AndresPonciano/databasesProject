@@ -1,22 +1,30 @@
 def rule_gain(rule, string1, string2, all_rules):
-    print('finding rule gain')
-
     rhs = set(rule[1].split(' '))
-    print(string1)
-    set1 = set(string1.split(' '))
-    print(rhs, set1)
+    set_1 = set(string1.split(' '))
 
-    U = rhs.difference(set1)
-    print(U)
+    U = rhs.difference(set_1)
+
     if not U:
         return 0
 
+    set_2 = set(string2.split(' '))
 
+    rules_prime = set()
+    for lhs in all_rules:
+        for temp_str in set_2:
+            if lhs in temp_str:
+                rules_prime.add(lhs)
+        
+    set_2_prime = set_2.union(rules_prime)
+
+    G = (rhs.intersection(set_2_prime)).difference(set_1)
     
+    # print('g is: ', G)
+    # print('u is: ', U)
 
+    # print(len(G), len(U), len(G)/len(U))
 
-
-    return 1
+    return len(G)/len(U)
 
 
 
