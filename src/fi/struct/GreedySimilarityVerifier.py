@@ -58,19 +58,12 @@ def find_candidate_rule_set(string1, string2, all_rules):
 
     theta = jaccard_similarity(set_1_prime, set_2_prime)
 
-    # print('theta is: ', theta)
-
-    # print('merging dictionaries: ')
     temp = {**cset_1, **cset_2}
-    # print(temp)
 
     for rule in temp:
-        # print(rule)
         rg_1 = rule_gain(temp[rule], string1, string2, all_rules)
         rg_2 = rule_gain(temp[rule], string2, string1, all_rules)
-        # print('hey', rg_1, rg_2)
         theta_val = theta / ( 1 + theta )
-        # print(theta_val)
 
         if rg_1 < theta_val and rule in cset_1.keys():
             del cset_1[rule]
@@ -81,13 +74,14 @@ def find_candidate_rule_set(string1, string2, all_rules):
     temp_cset_1 = dict(cset_1)
     temp_cset_2 = dict(cset_2)
 
-
-
-
     print('CANDIDATES1: ', cset_1)
     print('CANDIDATES2: ', cset_2)
 
-
+    jaccard_of_expanded = expands(string1, string2, temp_cset_1, temp_cset_2, all_rules)
+    print('returned from expands: ', jaccard_of_expanded)
+    print('after expands: ')
+    print(temp_cset_1)
+    print(temp_cset_2)
     #THIS SHOULD BE THE END OF THE WHILE TRUE LOOP###############################
 
     return cset_1, cset_2
@@ -114,7 +108,8 @@ def expands(string1, string2, cset_1, cset_2, all_rules):
 
     i = 0
     # while len(cset_1.union(cset_2)) != 0:
-    while i != 2:
+    while {**cset_1, **cset_2}:
+    # while i != 2:
         lhs1, rhs1, most_gain_1 = find_gain_effective_rule(cset_1, string1, string2, all_rules)
         lhs2, rhs2, most_gain_2 = find_gain_effective_rule(cset_2, string2, string1, all_rules)
 
