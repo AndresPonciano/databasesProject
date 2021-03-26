@@ -48,40 +48,46 @@ def find_candidate_rule_set(string1, string2, all_rules):
     cset_2 = find_initial_candidates(string2, string1, all_rules)
 
     #THIS SHOULD BE THE BEGINNING OF A WHILE TRUE LOOP############################
-    set_1_prime = set(string1.split(' '))
-    set_2_prime = set(string1.split(' '))
-    for rule in cset_1:
-        set_1_prime = set_1_prime.union(set(cset_1[rule]))
+    while True:
+        set_1_prime = set(string1.split(' '))
+        set_2_prime = set(string1.split(' '))
+        for rule in cset_1:
+            set_1_prime = set_1_prime.union(set(cset_1[rule]))
 
-    for rule in cset_2:
-        set_2_prime = set_2_prime.union(set(cset_2[rule]))
+        for rule in cset_2:
+            set_2_prime = set_2_prime.union(set(cset_2[rule]))
 
-    theta = jaccard_similarity(set_1_prime, set_2_prime)
+        theta = jaccard_similarity(set_1_prime, set_2_prime)
 
-    temp = {**cset_1, **cset_2}
+        temp = {**cset_1, **cset_2}
 
-    for rule in temp:
-        rg_1 = rule_gain(temp[rule], string1, string2, all_rules)
-        rg_2 = rule_gain(temp[rule], string2, string1, all_rules)
-        theta_val = theta / ( 1 + theta )
+        for rule in temp:
+            rg_1 = rule_gain(temp[rule], string1, string2, all_rules)
+            rg_2 = rule_gain(temp[rule], string2, string1, all_rules)
+            theta_val = theta / ( 1 + theta )
 
-        if rg_1 < theta_val and rule in cset_1.keys():
-            del cset_1[rule]
+            if rg_1 < theta_val and rule in cset_1.keys():
+                del cset_1[rule]
 
-        if rg_2 < theta_val and rule in cset_2.keys():
-            del cset_2[rule]
+            if rg_2 < theta_val and rule in cset_2.keys():
+                del cset_2[rule]
 
-    temp_cset_1 = dict(cset_1)
-    temp_cset_2 = dict(cset_2)
+        temp_cset_1 = dict(cset_1)
+        temp_cset_2 = dict(cset_2)
 
-    print('CANDIDATES1: ', cset_1)
-    print('CANDIDATES2: ', cset_2)
+        print('CANDIDATES1: ', cset_1)
+        print('CANDIDATES2: ', cset_2)
 
-    jaccard_of_expanded = expands(string1, string2, temp_cset_1, temp_cset_2, all_rules)
-    print('returned from expands: ', jaccard_of_expanded)
-    print('after expands: ')
-    print(temp_cset_1)
-    print(temp_cset_2)
+        jaccard_of_expanded = expands(string1, string2, temp_cset_1, temp_cset_2, all_rules)
+        print('returned from expands: ', jaccard_of_expanded)
+        print('after expands: ')
+        print(temp_cset_1)
+        print(temp_cset_2)
+        if (not temp_cset_1 and not temp_cset_2) or (temp_cset_1 == cset_1 and temp_cset_2 == cset_2):
+            break
+
+        cset_1 = temp_cset_1.copy()
+        cset_2 = temp_cset_2.copy()
     #THIS SHOULD BE THE END OF THE WHILE TRUE LOOP###############################
 
     return cset_1, cset_2
@@ -151,3 +157,4 @@ if __name__ == "__main__":
     rule_gain1 = rule_gain(rhs, q1, t2, synonymPairs)
     # print(rule_gain1)
     idk1, idk2 = find_candidate_rule_set(q1, t2, synonymPairs)
+    print(idk1, idk2)
