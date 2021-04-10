@@ -75,12 +75,12 @@ def find_candidate_rule_set(string1, string2, all_rules):
         temp_cset_1 = dict(cset_1)
         temp_cset_2 = dict(cset_2)
 
-        print('CANDIDATES1: ', cset_1)
-        print('CANDIDATES2: ', cset_2)
+        # print('CANDIDATES1: ', cset_1)
+        # print('CANDIDATES2: ', cset_2)
 
         jaccard_of_expanded = expands(string1, string2, temp_cset_1, temp_cset_2, all_rules)
-        print('returned from expands: ', jaccard_of_expanded)
-        print('after expands: ')
+        # print('returned from expands: ', jaccard_of_expanded)
+        # print('after expands: ')
         print(temp_cset_1)
         print(temp_cset_2)
         if (not temp_cset_1 and not temp_cset_2) or (temp_cset_1 == cset_1 and temp_cset_2 == cset_2):
@@ -90,6 +90,7 @@ def find_candidate_rule_set(string1, string2, all_rules):
         cset_2 = temp_cset_2.copy()
     #THIS SHOULD BE THE END OF THE WHILE TRUE LOOP###############################
 
+    print('before returning from find c_set', set_1_prime)
     return cset_1, cset_2
 
 def find_gain_effective_rule(cset, string1, string2, all_rules):
@@ -138,23 +139,31 @@ def expands(string1, string2, cset_1, cset_2, all_rules):
 
 if __name__ == "__main__":
 
-    q1 = 'Intl WH Conf 2012'
-    t2 = 'Intl Wireless Health Conference 2012 UK'
+    # q1 = 'Intl WH Conf 2012'
+    # t2 = 'Intl Wireless Health Conference 2012 UK'
+
+    # synonymPairs = {
+    #     'WH': ['Wireless Health'],
+    #     'Intl': ['International'],
+    #     'Wireless Health': ['WH'],
+    #     'Conference': ['Conf'],
+    #     'UK': ['United Kingdom'],
+    #     'Conf': ['Conference'],
+    # }
+
+    # # print(rule_gain1)
+    # idk1, idk2 = find_candidate_rule_set(q1, t2, synonymPairs)
+    # print(idk1, idk2)
+
+    s1 = 'Proceedings of the VLDB Endowment 2012: 38th International Conference on Very Large Databases, Turkey'
+    s2 = 'PVLDB 2012 Turkey'
 
     synonymPairs = {
-        'WH': ['Wireless Health'],
-        'Intl': ['International'],
-        'Wireless Health': ['WH'],
-        'Conference': ['Conf'],
-        'UK': ['United Kingdom'],
-        'Conf': ['Conference'],
+        'PVLDB': ['International Conference on Very Large Databases'],
+        'PVLDB': ['Proceedings of the VLDB Endowment'],
     }
 
-    #this is how we would do a single rule?
-    lhs = 'WH'
-    rhs = ['Wireless Health']
-
-    rule_gain1 = rule_gain(rhs, q1, t2, synonymPairs)
-    # print(rule_gain1)
-    idk1, idk2 = find_candidate_rule_set(q1, t2, synonymPairs)
-    print(idk1, idk2)
+    idk1, idk2 = find_candidate_rule_set(s1, s2, synonymPairs)
+    theta = expands(s1, s2, idk1, idk2, synonymPairs)
+    print('hi', idk1, idk2)
+    print(theta)
