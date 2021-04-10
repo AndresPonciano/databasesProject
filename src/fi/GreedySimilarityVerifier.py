@@ -147,33 +147,23 @@ def expands(string1, string2, cset_1, cset_2, all_rules):
     return jaccard_similarity(set_1_prime, set_2_prime)
 
 if __name__ == "__main__":
-
-    # q1 = 'Intl;WH;Conf;2012'
-    # t2 = 'Intl;WirelessHealth;Conference;2012;UK'
+    # s1 = 'Proceedings of the VLDB Endowment;2012;38th;International Conference on Very Large Databases;Turkey'
+    # s2 = 'PVLDB;2012;Turkey'
 
     # synonymPairs = {
-    #     'WH': ['Wireless Health'],
-    #     'Intl': ['International'],
-    #     'Wireless Health': ['WH'],
-    #     'Conference': ['Conf'],
-    #     'UK': ['United Kingdom'],
-    #     'Conf': ['Conference'],
+    #     'PVLDB': ['International Conference on Very Large Databases', 'Proceedings of the VLDB Endowment'],
     # }
-
-    # # print(rule_gain1)
-    # idk1, idk2 = find_candidate_rule_set(q1, t2, synonymPairs)
-    # print(idk1, idk2)
-
-    s1 = 'Proceedings of the VLDB Endowment;2012;38th;International Conference on Very Large Databases;Turkey'
-    s2 = 'PVLDB;2012;Turkey'
-
+    
+    #might have to turn synonym pairs to a list instead of a set/dictionary
+    s1 = 'University of Washington;1705 NE Pacific St Seattle, WA 98195'
+    s2 = 'UW'
+    
     synonymPairs = {
-        'PVLDB': ['International Conference on Very Large Databases', 'Proceedings of the VLDB Endowment'],
-        # 'PVLDB': ['Proceedings of the VLDB Endowment'],
+        'UW': ['University of Washington', '1705 NE Pacific St Seattle, WA 98195', 'University of Waterloo']
     }
 
     idk1, idk2 = find_candidate_rule_set(s1, s2, synonymPairs)
-    # print('hi', idk1, idk2)
+    print('hi', idk1, idk2)
     theta = expands(s1, s2, idk1, idk2, synonymPairs)
     print(theta)
 
