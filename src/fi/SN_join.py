@@ -1,4 +1,3 @@
-# import expand
 import math
 import Jaccard
 import copy
