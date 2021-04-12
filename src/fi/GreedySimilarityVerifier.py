@@ -54,8 +54,8 @@ def find_candidate_rule_set(string1, string2, all_rules):
     # print('---')
     cset_2 = find_initial_candidates(string2, string1, all_rules)
 
-    print('initial cand', cset_1)
-    print(cset_2)
+    # print('initial cand', cset_1)
+    # print(cset_2)
     #THIS SHOULD BE THE BEGINNING OF A WHILE TRUE LOOP############################
     while True:
         set_1_prime = set(string1.split(';'))

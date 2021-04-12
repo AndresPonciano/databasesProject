@@ -32,4 +32,9 @@ Proceedings;of;the;14th;Chinese Conference on Biometric Recognition
 The;Computational Complexity Conference
 6th;IEEE;International;Conference on Cloud Computing and Intelligence Systems
 7th;International;Workshop;on;Computational Color Imaging Workshop
-CCIW - Computational Color Imaging Workshop
+Distributed Artificial Intelligence;Second;International;Conference
+Eigth;Discourse Anaphora and Anaphor Resolution Colloquium
+Proceedings;of;the;56th;Annual;Design Automation Conference
+13th;IAPR;International;Workshop;on;Document Analysis Systems
+2016;Data Compression Conference
+Conference;on;Design of Circuits and Integrated Systems

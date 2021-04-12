@@ -18,7 +18,7 @@ def get_applicable_rules(set_1, all_rules):
     return rules_prime
 
 def full_expansion(string1, string2, all_rules):
-    print('hey')
+    # print('hey')
     set_1 = set(string1.split(';'))
     set_2 = set(string2.split(';'))
 
@@ -30,8 +30,8 @@ def full_expansion(string1, string2, all_rules):
 
     set_1_prime = set_1.union(rules_prime_1)
     set_2_prime = set_2.union(rules_prime_2)
-    print(set_1_prime)
-    print(set_2_prime)
+    # print(set_1_prime)
+    # print(set_2_prime)
 
     return jaccard_similarity(set_1_prime, set_2_prime)
 

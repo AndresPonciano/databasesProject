@@ -66,3 +66,15 @@ Computational Complexity Conference
 IEEE;International;Conference on Cloud Computing and Intelligence Systems
 7th;Intl;Workshop;on;CCIW
 Workshop;on;Computational Color Imaging Workshop
+DAI;2nd;Intl;Conf
+Distributed Artificial Intelligence;Conference
+8th;DAARC
+Eigth;Discourse Anaphora and Anaphor Resolution Colloquium
+Proceedings;of;the;56th;Annual;DAC
+56th;Annual;Design Automation Conference
+13th;IAPR;Intl;Workshop;on;DAS
+International;Workshop;on;Document Analysis Systems
+2016;DCC
+Data Compression Conference
+Conf;on;DCIS
+Conference;on;Design of Circuits and Integrated Systems
