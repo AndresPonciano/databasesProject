@@ -1,0 +1,42 @@
+Proceedings;of;the;First;Amrita ACM-W Celebration on Women in Computing in India
+Applied Computing;Second;Asian Applied Computing Conference
+Automated and Algorithmic Debugging;First;International;Workshop
+Advances in Architectural Geometry;2010
+International;Conference;on;Algorithmic Applications in Management
+Approaches and Applications of Inductive Programming;Third;International;Workshop
+International;Conference;on;Adaptive Agents and Multiagent Systems
+Tenth;Annual;Conference on Advanced Computer Architecture
+The;Fifth;Australian Conference on Artificial Life
+Advances in Computing and Communications;First;International;Conference
+The;Second;International Conference on Blockchain Computing and Applications
+The;4th;International Conference on Big Data, Cloud Computing, and Data Science Engineering
+Proceedings;of;Biocomputing and emergent computation
+Published;in;2011;Baltic Congress on Future Internet and Communications
+Proceedings;of;the;Second;Conference on Biographical Data in a Digital World
+2021;Fifth;International Conference on Big Data and Internet of Things
+The;11th;International;Conference on Big Data Technologies and Application
+The;Biologically Inspired Cognitive Architectures;Society
+International;Conference;on;Biologically Inspired Cooperative Computing
+13th;International;Conference;on;Bioinformatics and Computational Biology
+Conference;on;Brain and Health Informatics
+Proceedings;of;Bristol Ideas in Mobile Learning Symposium;2014
+
+
+
+
+
+BIIML - Bristol Ideas in Mobile Learning Symposium
+CAAN - Combinatorial and Algorithmic Aspects of Networking
+CAAP - Colloquium on Trees in Algebra and Programming
+CAI - Conference on Algebraic Informatics
+CAIA - Conference on Artificial Intelligence Applications
+CATA - International Conference on Computers and Their Applications
+CATE - Computers and Advanced Technology in Education
+CBC - International Workshop on Code-Based Cryptography
+CBD - International Conference on Advanced Cloud and Big Data
+CCA - International Conference on Computability and Complexity in Analysis
+CCBD - International Conference on Cloud Computing and Big Data
+CCBR - Chinese Conference on Biometric Recognition
+CCC - Computational Complexity Conference
+CCIS - International Conference on Cloud Computing and Intelligence Systems
+CCIW - Computational Color Imaging Workshop
