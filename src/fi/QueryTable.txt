@@ -20,23 +20,16 @@ International;Conference;on;Biologically Inspired Cooperative Computing
 13th;International;Conference;on;Bioinformatics and Computational Biology
 Conference;on;Brain and Health Informatics
 Proceedings;of;Bristol Ideas in Mobile Learning Symposium;2014
-
-
-
-
-
-BIIML - Bristol Ideas in Mobile Learning Symposium
-CAAN - Combinatorial and Algorithmic Aspects of Networking
-CAAP - Colloquium on Trees in Algebra and Programming
-CAI - Conference on Algebraic Informatics
-CAIA - Conference on Artificial Intelligence Applications
-CATA - International Conference on Computers and Their Applications
-CATE - Computers and Advanced Technology in Education
-CBC - International Workshop on Code-Based Cryptography
-CBD - International Conference on Advanced Cloud and Big Data
-CCA - International Conference on Computability and Complexity in Analysis
-CCBD - International Conference on Cloud Computing and Big Data
-CCBR - Chinese Conference on Biometric Recognition
-CCC - Computational Complexity Conference
-CCIS - International Conference on Cloud Computing and Intelligence Systems
+First;Workshop;on;Combinatorial and Algorithmic Aspects of Networking
+Proceedings;of;the;Fifteenth;Colloquium on Trees in Algebra and Programming
+International;Conference on Algebraic Informatics
+17th;International;Conference on Artificial Intelligence Applications;and;Innovations
+International;Conference on Computers and Their Applications
+International;Workshop;on;Code-Based Cryptography
+The;Eigth;International;Conference on Advanced Cloud and Big Data
+International;Conference on Computability and Complexity in Analysis
+Proceedings;of;the;14th;Chinese Conference on Biometric Recognition
+The;Computational Complexity Conference
+6th;IEEE;International;Conference on Cloud Computing and Intelligence Systems
+7th;International;Workshop;on;Computational Color Imaging Workshop
 CCIW - Computational Color Imaging Workshop

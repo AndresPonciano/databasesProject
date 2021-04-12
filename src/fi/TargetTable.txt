@@ -42,3 +42,27 @@ Conf;on;BIH
 Conference;on;Brain and Health Informatics
 Proceedings;of;BIIML;2014
 Bristol Ideas in Mobile Learning Symposium;2014
+1st;Workshop;on;CAAN
+Workshop;on;Combinatorial and Algorithmic Aspects of Networking
+Proceedings;of;the;15th;CAAP
+Fifteenth;Colloquium on Trees in Algebra and Programming
+Intl;CAI
+Conference on Algebraic Informatics
+17th;Intl;CAIA;and;Innovations
+Conference on Artificial Intelligence Applications;and;Innovations
+International;CATA
+Conference on Computers and Their Applications
+Intl;Workshop;on;CBC
+Workshop;on;Code-Based Cryptography
+The;8th;Intl;CBD
+The;Eigth;International;Conference on Advanced Cloud and Big Data
+International;CCA
+Conference on Computability and Complexity in Analysis
+Proceedings;of;the;14th;CCBR
+14th;Chinese Conference on Biometric Recognition
+The;CCC
+Computational Complexity Conference
+6th;IEEE;Intl;CCIS
+IEEE;International;Conference on Cloud Computing and Intelligence Systems
+7th;Intl;Workshop;on;CCIW
+Workshop;on;Computational Color Imaging Workshop
