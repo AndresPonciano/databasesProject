@@ -1,26 +1,23 @@
 from Jaccard import jaccard_similarity
+from FullExpansion import get_applicable_rules
 
 def rule_gain(rhs, string1, string2, all_rules):
-    rhs_set = set()
-    rhs_set.add(rhs)
-    set_1 = set(string1.split(';'))
+    temp = rhs.split(' ')
+    rhs_set = set(temp)
+    set_1 = set(string1.split(' '))
 
     U = rhs_set.difference(set_1)
     if not U:
         return 0
 
-    set_2 = set(string2.split(';'))
+    set_2 = set(string2.split(' '))
 
     #finding applicable rulles of set_2
-    rules_prime = set()
-    for rule in all_rules:
-        for temp_str in set_2:
-            if rule[0] in temp_str:
-                rules_prime.add(rule)
+    rules_prime = get_applicable_rules(string2, all_rules)
         
-    # set_2_prime = set()
+    # set_2_prime
     for rule in rules_prime:
-        set_2.add(rule[1])
+        set_2.add(rule)
 
     # set_2_prime = set_2.union(rules_prime)
 
@@ -58,14 +55,16 @@ def find_candidate_rule_set(string1, string2, all_rules):
     # print(cset_2)
     #THIS SHOULD BE THE BEGINNING OF A WHILE TRUE LOOP############################
     while True:
-        set_1_prime = set(string1.split(';'))
-        set_2_prime = set(string1.split(';'))
+        set_1_prime = set(string1.split(' '))
+        set_2_prime = set(string2.split(' '))
         for rule in cset_1:
-            set_1_prime.add(rule[1])
+            temp_set = rule[1].split(' ')
+            set_1_prime = set_1_prime.union(temp_set)
             # set_1_prime = set_1_prime.union(set(cset_1[rule]))
 
         for rule in cset_2:
-            set_2_prime.add(rule[1])
+            temp_set = rule[1].split(' ')
+            set_2_prime = set_2_prime.union(temp_set)
             # set_2_prime = set_2_prime.union(set(cset_2[rule]))
 
         theta = jaccard_similarity(set_1_prime, set_2_prime)
@@ -125,8 +124,8 @@ def find_gain_effective_rule(cset, string1, string2, all_rules):
 def expands(string1, string2, cset_1, cset_2, all_rules):
     # print('expanding')
     #change these to expanded sets??
-    set_1_prime = set(string1.split(';'))
-    set_2_prime = set(string2.split(';'))
+    set_1_prime = set(string1.split(' '))
+    set_2_prime = set(string2.split(' '))
 
 
     i = 0
@@ -137,7 +136,9 @@ def expands(string1, string2, cset_1, cset_2, all_rules):
         lhs2, rhs2, most_gain_2 = find_gain_effective_rule(cset_2, string2, string1, all_rules)
 
         if most_gain_1 > 0:
-            set_1_prime.add(rhs1)
+            temp_set = rhs1.split(' ')
+            temp_set = set(temp_set)
+            set_1_prime = set_1_prime.union(temp_set)
 
         try:
             cset_1.remove((lhs1, rhs1))
@@ -145,7 +146,9 @@ def expands(string1, string2, cset_1, cset_2, all_rules):
             pass
 
         if most_gain_2 > 0:
-            set_2_prime.add(rhs2)
+            temp_set = rhs2.split(' ')
+            temp_set = set(temp_set)
+            set_2_prime = set_2_prime.union(temp_set)
 
         try:
             cset_2.remove((lhs2, rhs2))
@@ -159,6 +162,13 @@ def expands(string1, string2, cset_1, cset_2, all_rules):
     # print(set_2_prime)
     return jaccard_similarity(set_1_prime, set_2_prime)
 
+def sim_measure(string1, string2, all_rules):
+    cset_1, cset_2 = find_candidate_rule_set(string1, string2, all_rules)
+    print('hi', cset_1, cset_2)
+    theta = expands(s1, s2, cset_1, cset_2, all_rules)
+    print(theta)
+    return theta
+
 if __name__ == "__main__":
     # s1 = 'Proceedings of the VLDB Endowment;2012;38th;International Conference on Very Large Databases;Turkey'
     # s2 = 'PVLDB;2012;Turkey'
@@ -168,7 +178,7 @@ if __name__ == "__main__":
     # }
     
     #might have to turn synonym pairs to a list instead of a set/dictionary
-    s1 = 'University of Washington;1705 NE Pacific St Seattle, WA 98195'
+    s1 = 'University of Washington 1705 NE Pacific St Seattle, WA 98195'
     s2 = 'UW'
     
     # synonymPairs = {
@@ -177,13 +187,10 @@ if __name__ == "__main__":
     
     synonymPairs = [('UW', 'University of Washington'), ('UW', '1705 NE Pacific St Seattle, WA 98195'), ('UW', 'University of Waterloo')]
 
-    idk1, idk2 = find_candidate_rule_set(s1, s2, synonymPairs)
-    print('hi', idk1, idk2)
-    theta = expands(s1, s2, idk1, idk2, synonymPairs)
-    print(theta)
+    theta = sim_measure(s1, s2, synonymPairs)
 
-    set1 = set(s1.split(';'))
-    set2 = set(s2.split(';'))
+    set1 = set(s1.split(' '))
+    set2 = set(s2.split(' '))
     # # print('bruh', set1)
     # # print(set2)
     bruh = jaccard_similarity(set1, set2)
