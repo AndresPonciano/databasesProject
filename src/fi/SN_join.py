@@ -4,11 +4,18 @@ import copy
 
 # expand a string according to the whole rule set
 def full_expand(s, rule_set):
+    S_prime = set()
+    for i in rule_set:
+        if i in s:
+            if ' ' in rule_set[i]:
+                temp = rule_set[i].split(' ')
+                for j in temp:
+                    S_prime.add(j)
+            else:
+                S_prime.add(rule_set[i])
     S = set(s.split(' '))
-    S_prime = copy.deepcopy(S)
     for i in S:
-        if i in rule_set:
-            S_prime.add(rule_set[i])
+        S_prime.add(i)
     return S_prime
 
 # similarity measure with full expansion
