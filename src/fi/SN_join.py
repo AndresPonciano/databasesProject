@@ -28,10 +28,10 @@ def full_expansion_sim_measure(s1, s2, rule_set):
 # signature generate in prefix_filter scheme
 def prefix_signatures_gen(s, theta):
     result = set()
-    s = sorted(s)
-    threshold = math.ceil((1-theta) * len(s))
+    temp = sorted(s)
+    threshold = math.ceil((1-theta) * len(temp))
     for i in range(threshold):
-        result.add(s[i])
+        result.add(temp[i])
     return result
 
 # extend prefix_signature_gen
