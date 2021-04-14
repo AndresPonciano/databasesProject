@@ -17,6 +17,22 @@ def get_applicable_rules(set_1, all_rules):
 
     return rules_prime
 
+def tokenize(string1, all_rules):
+    S_prime = set()
+    for i in rule_set:
+        if i in s:
+            if ' ' in rule_set[i]:
+                temp = rule_set[i].split(' ')
+                for j in temp:
+                    S_prime.add(j)
+            else:
+                S_prime.add(rule_set[i])
+    S = set(s.split(' '))
+    for i in S:
+        S_prime.add(i)
+    return S_prime
+
+
 def full_expansion(string1, string2, all_rules):
     # print('hey')
     set_1 = set(string1.split(';'))
