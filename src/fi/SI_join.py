@@ -41,7 +41,6 @@ def SI_index(S, rule_set, theta):
     for i in range(len(L)):
         L_F.append((L[i], F[i]))
         sID_L_F.append((i, L[i], F[i]))
-    # print(sID_L_F)
 
     # root entry
     temp = copy.deepcopy(S)
@@ -68,9 +67,9 @@ def SI_index(S, rule_set, theta):
                 i.P.append(Leaf_Entry(S[j[0]], rule_set))
         i.P = sorted(i.P, key=lambda x: x.t)
     
-    for i in root:
-        for j in i.P:
-            print(i.u, i.v, j.t)
+    # for i in root:
+    #     for j in i.P:
+    #         print(i.u, i.v, j.t)
 
     # leaf entry
     for i in sID_L_F:
@@ -114,32 +113,32 @@ def SI_join(S, T, theta, rule_set, sim_measure):
     
 if __name__ == "__main__":
 # for SN_join testing
-    # synonymPairs = {
-    #         'WH': 'Wireless Health',
-    #         'Intl': 'International',
-    #         'Wireless Health': 'WH',
-    #         'Conference': 'Conf',
-    #         'UK': 'United Kingdom',
-    #         'Conf': 'Conference',
-    #     }
+    # synonymPairs = [
+    #         ('WH', 'Wireless Health'),
+    #         ('Intl', 'International'),
+    #         ('Wireless Health', 'WH'),
+    #         ('Conference', 'Conf'),
+    #         ('UK', 'United Kingdom'),
+    #         ('Conf', 'Conference'),
+    # ]
 
     # q1 = 'Intl WH Conf 2012'
 
     # S = ['Computational Complexity Conference', 'International Symposium on Fundamentals of Computation Theory']
     # T = ['IEEE Symposium on Foundations of Computer Science', 'International Colloquium on Automata, Languages and Programming']
-    # print(full_expand(q1, synonymPairs))
-    # print(SN_signatures_gen(q1, 0.5, synonymPairs))
-    # print(full_expansion_sim_measure(S[1], T[0], synonymPairs))
-    # print(full_expansion_sim_measure(S[1], T[1], synonymPairs))
-    # print(SN_join(S, T, synonymPairs, 0.2, full_expansion_sim_measure))
+    # print(SN_join.full_expand(q1, synonymPairs))
+    # print(SN_join.SN_signatures_gen(q1, 0.5, synonymPairs))
+    # print(SN_join.full_expansion_sim_measure(S[1], T[0], synonymPairs))
+    # print(SN_join.full_expansion_sim_measure(S[1], T[1], synonymPairs))
+    # print(SN_join.SN_join(S, T, synonymPairs, 0.2, SN_join.full_expansion_sim_measure))
 
 # for SI_join testing
-    rule_set_2 = {
-        'Intl': 'International',
-        'Conf': 'Conference',
-        'VLDB': 'Very Large Data Bases',
-        'Very Large Data Bases': 'VLDB',
-    }
+    rule_set_2 = [
+        ('Intl', 'International'),
+        ('Conf', 'Conference'),
+        ('VLDB', 'Very Large Data Bases'),
+        ('Very Large Data Bases', 'VLDB'),
+    ]
 
     q1 = '2013 ACM Intl Conf on Management of Data USA'
     q2 = 'Very Large Data Bases Conf'
@@ -148,11 +147,11 @@ if __name__ == "__main__":
 
     S = [q1, q2, q3, q4]
     T = [q3, q4, q1, q2]
-    # I_list(S, rule_set_2)
+    # print(I_list(S, rule_set_2, 0.7))
     # print(SN_join.SN_signatures_gen(q4, 0.7, rule_set_2))
     # print(SN_join.full_expand(q3, rule_set_2))
     # print(SI_index(S, rule_set_2, 0.8))
     # print(SI_index(T, rule_set_2, 0.8))
-    SI_tree_S = SI_index(S, rule_set_2, 0.8)
-    SI_tree_T = SI_index(T, rule_set_2, 0.8)
-    print(SI_join(S, T, 0.8, rule_set_2, SN_join.full_expansion_sim_measure))
+    # SI_tree_S = SI_index(S, rule_set_2, 0.8)
+    # SI_tree_T = SI_index(T, rule_set_2, 0.8)
+    # print(SI_join(S, T, 0.8, rule_set_2, SN_join.full_expansion_sim_measure))

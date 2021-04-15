@@ -6,13 +6,13 @@ import copy
 def full_expand(s, rule_set):
     S_prime = set()
     for i in rule_set:
-        if i in s:
-            if ' ' in rule_set[i]:
-                temp = rule_set[i].split(' ')
+        if i[0] in s:
+            if ' ' in i[1]:
+                temp = i[1].split(' ')
                 for j in temp:
                     S_prime.add(j)
             else:
-                S_prime.add(rule_set[i])
+                S_prime.add(i[1])
     S = set(s.split(' '))
     for i in S:
         S_prime.add(i)
@@ -37,9 +37,9 @@ def prefix_signatures_gen(s, theta):
 # extend prefix_signature_gen
 def SN_signatures_gen(s, theta, rule_set):
     result = set()
-    for i in rule_set.items():
-        R_i = {}
-        R_i[i[0]] = i[1]
+    for i in rule_set:
+        R_i = []
+        R_i.append((i[0], i[1]))
         S_i = full_expand(s, R_i)
         Sig_S_i = prefix_signatures_gen(S_i, theta)
         result = result | Sig_S_i
