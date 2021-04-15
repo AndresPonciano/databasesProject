@@ -1,5 +1,5 @@
 from Jaccard import jaccard_similarity
-from FullExpansion import get_applicable_rules
+from FE_sim import full_expand
 
 def rule_gain(rhs, string1, string2, all_rules):
     temp = rhs.split(' ')
@@ -13,29 +13,17 @@ def rule_gain(rhs, string1, string2, all_rules):
     set_2 = set(string2.split(' '))
 
     #finding applicable rulles of set_2
-    rules_prime = get_applicable_rules(string2, all_rules)
+    rules_prime = full_expand(string2, all_rules)
         
     # set_2_prime
     for rule in rules_prime:
         set_2.add(rule)
 
-    # set_2_prime = set_2.union(rules_prime)
-
-    # G = (rhs.intersection(set_2_prime)).difference(set_1)
     G = (rhs_set.intersection(set_2)).difference(set_1)
-    
-    # print('g is: ', G)
-    # print('u is: ', U)
-
-    # print(len(G), len(U), len(G)/len(U))
 
     return len(G)/len(U)
 
 def find_initial_candidates(string1, string2, all_rules):
-    # print('in find initial')
-    # print(all_rules)
-
-    # cset = dict()
     cset = []
     for rule in all_rules:
         rg = rule_gain(rule[1], string1, string2, all_rules)
@@ -48,7 +36,6 @@ def find_initial_candidates(string1, string2, all_rules):
 def find_candidate_rule_set(string1, string2, all_rules):
     #change these to dictionaries??
     cset_1 = find_initial_candidates(string1, string2, all_rules)
-    # print('---')
     cset_2 = find_initial_candidates(string2, string1, all_rules)
 
     # print('initial cand', cset_1)
@@ -79,11 +66,9 @@ def find_candidate_rule_set(string1, string2, all_rules):
             theta_val = theta / ( 1 + theta )
 
             if rg_1 < theta_val and rule in cset_1:
-                # print('are we here')
                 cset_1.remove(rule)
 
             if rg_2 < theta_val and rule in cset_2:
-                # print('are we here')
                 cset_2.remove(rule)
 
         temp_cset_1 = list(cset_1)
@@ -122,11 +107,9 @@ def find_gain_effective_rule(cset, string1, string2, all_rules):
     return lhs, rhs, max_gain_rule
 
 def expands(string1, string2, cset_1, cset_2, all_rules):
-    # print('expanding')
     #change these to expanded sets??
     set_1_prime = set(string1.split(' '))
     set_2_prime = set(string2.split(' '))
-
 
     i = 0
     # while {**cset_1, **cset_2}:
@@ -155,18 +138,13 @@ def expands(string1, string2, cset_1, cset_2, all_rules):
         except:
             pass
 
-        # print(i)
         i += 1
-    
-    # print('in expands', set_1_prime)
-    # print(set_2_prime)
+
     return jaccard_similarity(set_1_prime, set_2_prime)
 
-def sim_measure(string1, string2, all_rules):
-    cset_1, cset_2 = find_candidate_rule_set(string1, string2, all_rules)
-    print('hi', cset_1, cset_2)
+def SE_sim_measure(s1, s2, all_rules):
+    cset_1, cset_2 = find_candidate_rule_set(s1, s2, all_rules)
     theta = expands(s1, s2, cset_1, cset_2, all_rules)
-    print(theta)
     return theta
 
 if __name__ == "__main__":
@@ -178,20 +156,28 @@ if __name__ == "__main__":
     # }
     
     #might have to turn synonym pairs to a list instead of a set/dictionary
-    s1 = 'University of Washington 1705 NE Pacific St Seattle, WA 98195'
-    s2 = 'UW'
+    # s1 = 'University of Washington 1705 NE Pacific St Seattle, WA 98195'
+    # s2 = 'UW'
     
     # synonymPairs = {
     #     'UW': ['University of Washington', '1705 NE Pacific St Seattle, WA 98195', 'University of Waterloo']
     # }
     
-    synonymPairs = [('UW', 'University of Washington'), ('UW', '1705 NE Pacific St Seattle, WA 98195'), ('UW', 'University of Waterloo')]
+    synonymPairs = [
+        ('UW', 'University of Washington'), 
+        ('UW', '1705 NE Pacific St Seattle, WA 98195'), 
+        ('UW', 'University of Waterloo'),
+        ('WH', 'Wireless Health'),
+        ('Intl', 'International'),
+        ('Wireless Health', 'WH'),
+        ('Conference', 'Conf'),
+        ('UK', 'United Kingdom'),
+        ('Conf', 'Conference'),
+        ]
 
-    theta = sim_measure(s1, s2, synonymPairs)
-
-    set1 = set(s1.split(' '))
-    set2 = set(s2.split(' '))
-    # # print('bruh', set1)
-    # # print(set2)
-    bruh = jaccard_similarity(set1, set2)
-    print(bruh)
+    S = ['Computational Complexity Conference', 'International Symposium on Fundamentals of Computation Theory']
+    T = ['IEEE Symposium on Foundations of Computer Science', 'International Colloquium on Automata, Languages and Programming']
+    
+    print(SE_sim_measure(S[1], T[0], synonymPairs))
+    print(SE_sim_measure(S[1], T[1], synonymPairs))
+    
