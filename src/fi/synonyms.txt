@@ -1,0 +1,96 @@
+First : 1st
+1st: First
+A2CWiC: Amrita ACM-W Celebration on Women in Computing in India
+Amrita ACM-W Celebration on Women in Computing in India: A2CWiC
+Second: 2nd
+2nd: Second
+Asian Applied Computing Conference: AACC
+AACC: Asian Applied Computing Conference
+Automated and Algorithmic Debugging: AADEBUG
+AADEBUG: Automated and Algorithmic Debugging
+International: Intl
+Intl: International
+Advances in Architectural Geometry: AAG
+AAG: Advances in Architectural Geometry
+Conference: Conf
+Conf: Conference
+Algorithmic Applications in Management: AAIM
+AAIM: Algorithmic Applications in Management
+Approaches and Applications of Inductive Programming: AAIP
+AAIP: Approaches and Applications of Inductive Programming
+Third: 3rd
+3rd: Third
+Adaptive Agents and Multiagent Systems: AAMAS
+AAMAS: Adaptive Agents and Multiagent Systems
+Tenth: 10th
+10th: Tenth
+Advanced Computer Architecture: ACA
+ACA: Advanced Computer Architecture
+Fifth: 5th
+5th: Fifth
+Australian Conference on Artificial Life: ACAL
+ACAL: Australian Conference on Artificial Life
+Advances in Computing and Communications: ACC
+ACC: Advances in Computing and Communications
+Blockchain Computing and Applications: BCCA
+BCCA: Blockchain Computing and Applications
+Big Data, Cloud Computing, and Data Science Engineering: BCD
+BCD: Big Data, Cloud Computing, and Data Science Engineering
+Biocomputing and emergent computation: BCEC
+BCEC: Biocomputing and emergent computation
+Baltic Congress on Future Internet and Communications: BCFIC
+BCFIC: Baltic Congress on Future Internet and Communications
+Biographical Data in a Digital World: BD
+BD: Biographical Data in a Digital World
+Big Data and Internet of Things: BDIoT
+BDIoT: Big Data and Internet of Things
+Big Data Technologies and Application: BDTA
+BDTA: Big Data Technologies and Application
+Biologically Inspired Cognitive Architectures: BICA
+BICA: Biologically Inspired Cognitive Architectures
+Biologically Inspired Cooperative Computing: BICC
+Bioinformatics and Computational Biology: BICoB
+BICoB: Bioinformatics and Computational Biology
+Brain and Health Informatics: BIH
+BIH: Brain and Health Informatics
+Bristol Ideas in Mobile Learning Symposium: BIIML
+BIIML: Bristol Ideas in Mobile Learning Symposium
+Combinatorial and Algorithmic Aspects of Networking: CAAN
+CAAN: Combinatorial and Algorithmic Aspects of Networking
+Fifteenth: 15th
+15th: Fifteenth
+Colloquium on Trees in Algebra and Programming: CAAP
+CAAP: Colloquium on Trees in Algebra and Programming
+Conference on Algebraic Informatics: CAI
+CAI: Conference on Algebraic Informatics
+Conference on Artificial Intelligence Applications: CAIA
+CAIA: Conference on Artificial Intelligence Applications
+Conference on Computers and Their Applications: CATA
+CATA: Conference on Computers and Their Applications
+Code-Based Cryptography: CBC
+CBC: Code-Based Cryptography
+Eigth: 8th
+8th: Eigth
+Advanced Cloud and Big Data: CBD
+CBD: Advanced Cloud and Big Data
+Computability and Complexity in Analysis: CCA
+CCA: Computability and Complexity in Analysis
+Chinese Conference on Biometric Recognition: CCBR
+CCBR: Chinese Conference on Biometric Recognition
+Computational Complexity Conference: CCC
+CCC: Computational Complexity Conference
+Cloud Computing and Intelligence Systems: CCIS
+CCIS: Cloud Computing and Intelligence Systems
+Computational Color Imaging Workshop: CCIW
+CCIW: Computational Color Imaging Workshop
+Distributed Artificial Intelligence: DAI
+Discourse Anaphora and Anaphor Resolution Colloquium: DAARC
+DAARC: Discourse Anaphora and Anaphor Resolution Colloquium
+Design Automation Conference: DAC
+DAC: Design Automation Conference
+Document Analysis Systems: DAS
+DAS: Document Analysis Systems
+Data Compression Conference: DCC
+DCC: Data Compression Conference
+Design of Circuits and Integrated Systems: DCIS
+DCIS: Design of Circuits and Integrated Systems

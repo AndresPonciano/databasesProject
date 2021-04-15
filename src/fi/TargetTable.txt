@@ -12,13 +12,13 @@ AAIP 3rd Intl Workshop
 Approaches and Applications of Inductive Programming Workshop
 Intl Conf on AAMAS
 Conference on Adaptive Agents and Multiagent Systems
-10th Annual ACA
+10th Annual Conf on ACA
 Annual Conference on Advanced Computer Architecture
 The 5th ACAL
 Fifth Australian Conference on Artificial Life
 ACC 1st Intl Conf
 Advances in Computing and Communications International Conference
-The Second BCCA
+The Second Intl Conf BCCA
 The International Conference on Blockchain Computing and Applications
 The 4th BCD
 The International Conference on Big Data, Cloud Computing, and Data Science Engineering
@@ -30,7 +30,7 @@ Proceedings of the 2nd BD
 the Second Conference on Biographical Data in a Digital World
 2021 5th BDIoT
 2021 Fifth International Conference on Big Data and Internet of Things
-The 11th Intl BDTA
+The 11th Intl Conf on BDTA
 International Conference on Big Data Technologies and Application
 The BICA Society
 The Biologically Inspired Cognitive Architectures Society
@@ -54,8 +54,8 @@ International CATA
 Conference on Computers and Their Applications
 Intl Workshop on CBC
 Workshop on Code-Based Cryptography
-The 8th Intl CBD
-The Eigth International Conference on Advanced Cloud and Big Data
+The 8th Intl Conf on CBD
+The Conference on Advanced Cloud and Big Data
 International CCA
 Conference on Computability and Complexity in Analysis
 Proceedings of the 14th CCBR
