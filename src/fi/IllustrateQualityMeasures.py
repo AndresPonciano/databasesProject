@@ -1,5 +1,5 @@
-from GreedySimilarityVerifier import find_candidate_rule_set, expands
-from FullExpansion import full_expansion
+from SE_sim import find_candidate_rule_set, expands
+from FE_sim import full_expansion_sim_measure
 from Jaccard import jaccard_similarity
 
 if __name__ == "__main__":
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     # print('hi', idk1, idk2)
     theta = expands(s1, s2, cset_1, cset_2, synonym_pairs)
     print('SE:', theta)
-    val2 = full_expansion(s1, s2, synonym_pairs)
+    val2 = full_expansion_sim_measure(s1, s2, synonym_pairs)
     print('Full', val2)
     val3 = jaccard_similarity(set(s1.split(';')), set(s2.split(';')))
     print('Jaccard', val3)
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     # print('hi', idk1, idk2)
     theta = expands(s1, s2, cset_1, cset_2, synonym_pairs)
     print('SE:', theta)
-    val2 = full_expansion(s1, s2, synonym_pairs)
+    val2 = full_expansion_sim_measure(s1, s2, synonym_pairs)
     print('Full', val2)
     val3 = jaccard_similarity(set(s1.split(';')), set(s2.split(';')))
     print('Jaccard', val3)
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     # print('hi', idk1, idk2)
     theta = expands(s1, s2, cset_1, cset_2, synonym_pairs)
     print('SE:', theta)
-    val2 = full_expansion(s1, s2, synonym_pairs)
+    val2 = full_expansion_sim_measure(s1, s2, synonym_pairs)
     print('Full', val2)
     val3 = jaccard_similarity(set(s1.split(';')), set(s2.split(';')))
     print('Jaccard', val3)

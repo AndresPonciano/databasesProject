@@ -146,38 +146,3 @@ def SE_sim_measure(s1, s2, all_rules):
     cset_1, cset_2 = find_candidate_rule_set(s1, s2, all_rules)
     theta = expands(s1, s2, cset_1, cset_2, all_rules)
     return theta
-
-if __name__ == "__main__":
-    # s1 = 'Proceedings of the VLDB Endowment;2012;38th;International Conference on Very Large Databases;Turkey'
-    # s2 = 'PVLDB;2012;Turkey'
-
-    # synonymPairs = {
-    #     'PVLDB': ['International Conference on Very Large Databases', 'Proceedings of the VLDB Endowment'],
-    # }
-    
-    #might have to turn synonym pairs to a list instead of a set/dictionary
-    # s1 = 'University of Washington 1705 NE Pacific St Seattle, WA 98195'
-    # s2 = 'UW'
-    
-    # synonymPairs = {
-    #     'UW': ['University of Washington', '1705 NE Pacific St Seattle, WA 98195', 'University of Waterloo']
-    # }
-    
-    synonymPairs = [
-        ('UW', 'University of Washington'), 
-        ('UW', '1705 NE Pacific St Seattle, WA 98195'), 
-        ('UW', 'University of Waterloo'),
-        ('WH', 'Wireless Health'),
-        ('Intl', 'International'),
-        ('Wireless Health', 'WH'),
-        ('Conference', 'Conf'),
-        ('UK', 'United Kingdom'),
-        ('Conf', 'Conference'),
-        ]
-
-    S = ['Computational Complexity Conference', 'International Symposium on Fundamentals of Computation Theory']
-    T = ['IEEE Symposium on Foundations of Computer Science', 'International Colloquium on Automata, Languages and Programming']
-    
-    print(SE_sim_measure(S[1], T[0], synonymPairs))
-    print(SE_sim_measure(S[1], T[1], synonymPairs))
-    
