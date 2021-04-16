@@ -82,7 +82,7 @@ def SI_index(S, rule_set, theta):
 
     return root
 
-def SI_join(S, T, theta, rule_set, sim_measure):
+def SI_join(S, T, rule_set, theta, sim_measure):
     # filtering
     SI_s = SI_index(S, rule_set, theta)
     SI_t = SI_index(T, rule_set, theta)
@@ -94,10 +94,16 @@ def SI_join(S, T, theta, rule_set, sim_measure):
                     for Et in Ft.P:
                         if min(Es.t, Et.t) >= theta*max(Fs.u, Ft.u):
                             for g in (Es.P and Et.P):
-                                Ls = I_list(S, rule_set, theta)[g]
-                                Ls = frozenset(Ls)
-                                Lt = I_list(T, rule_set, theta)[g]
-                                Lt = frozenset(Lt)
+                                if g in I_list(S, rule_set, theta):
+                                    Ls = I_list(S, rule_set, theta)[g]
+                                    Ls = frozenset(Ls)
+                                else:
+                                    continue
+                                if g in I_list(T, rule_set, theta):
+                                    Lt = I_list(T, rule_set, theta)[g]
+                                    Lt = frozenset(Lt)
+                                else:
+                                    continue
                                 C = C | {(Ls, Lt)}
 
     # verification
